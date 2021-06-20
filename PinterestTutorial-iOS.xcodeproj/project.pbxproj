@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		F87F48E0267F703E004BD88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F48DF267F703E004BD88D /* AppDelegate.swift */; };
 		F87F48E2267F703E004BD88D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F48E1267F703E004BD88D /* SceneDelegate.swift */; };
-		F87F48E4267F703E004BD88D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F48E3267F703E004BD88D /* ViewController.swift */; };
 		F87F48E7267F703E004BD88D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87F48E5267F703E004BD88D /* Main.storyboard */; };
 		F87F48E9267F703E004BD88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F87F48E8267F703E004BD88D /* Assets.xcassets */; };
 		F87F48EC267F703E004BD88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F87F48EA267F703E004BD88D /* LaunchScreen.storyboard */; };
+		F87F48F8267F7392004BD88D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F48F7267F7392004BD88D /* MainVC.swift */; };
+		F87F48FC267F73D2004BD88D /* MainCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F48FA267F73D2004BD88D /* MainCVC.swift */; };
+		F87F48FD267F73D2004BD88D /* MainCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87F48FB267F73D2004BD88D /* MainCVC.xib */; };
+		F87F4900267F7402004BD88D /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F48FF267F7402004BD88D /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F87F48DC267F703E004BD88D /* PinterestTutorial-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PinterestTutorial-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87F48DF267F703E004BD88D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F87F48E1267F703E004BD88D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F87F48E3267F703E004BD88D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F87F48E6267F703E004BD88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F87F48E8267F703E004BD88D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F87F48EB267F703E004BD88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F87F48ED267F703E004BD88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F87F48F7267F7392004BD88D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		F87F48FA267F73D2004BD88D /* MainCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCVC.swift; sourceTree = "<group>"; };
+		F87F48FB267F73D2004BD88D /* MainCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCVC.xib; sourceTree = "<group>"; };
+		F87F48FF267F7402004BD88D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,74 @@
 		F87F48DE267F703E004BD88D /* PinterestTutorial-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F87F48DF267F703E004BD88D /* AppDelegate.swift */,
-				F87F48E1267F703E004BD88D /* SceneDelegate.swift */,
-				F87F48E3267F703E004BD88D /* ViewController.swift */,
-				F87F48E5267F703E004BD88D /* Main.storyboard */,
-				F87F48E8267F703E004BD88D /* Assets.xcassets */,
-				F87F48EA267F703E004BD88D /* LaunchScreen.storyboard */,
 				F87F48ED267F703E004BD88D /* Info.plist */,
+				F87F48E8267F703E004BD88D /* Assets.xcassets */,
+				F87F48F4267F733F004BD88D /* Source */,
+				F87F48F3267F7338004BD88D /* Resource */,
 			);
 			path = "PinterestTutorial-iOS";
+			sourceTree = "<group>";
+		};
+		F87F48F3267F7338004BD88D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F87F48F5267F734D004BD88D /* Storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F87F48F4267F733F004BD88D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F87F48DF267F703E004BD88D /* AppDelegate.swift */,
+				F87F48E1267F703E004BD88D /* SceneDelegate.swift */,
+				F87F4901267F7B79004BD88D /* Extensions */,
+				F87F48FE267F73EF004BD88D /* Consts */,
+				F87F48F9267F73B3004BD88D /* Cells */,
+				F87F48F6267F7357004BD88D /* VCs */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F87F48F5267F734D004BD88D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F87F48E5267F703E004BD88D /* Main.storyboard */,
+				F87F48EA267F703E004BD88D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F87F48F6267F7357004BD88D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				F87F48F7267F7392004BD88D /* MainVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		F87F48F9267F73B3004BD88D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F87F48FA267F73D2004BD88D /* MainCVC.swift */,
+				F87F48FB267F73D2004BD88D /* MainCVC.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F87F48FE267F73EF004BD88D /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				F87F48FF267F7402004BD88D /* Const.swift */,
+			);
+			path = Consts;
+			sourceTree = "<group>";
+		};
+		F87F4901267F7B79004BD88D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F87F48EC267F703E004BD88D /* LaunchScreen.storyboard in Resources */,
+				F87F48FD267F73D2004BD88D /* MainCVC.xib in Resources */,
 				F87F48E9267F703E004BD88D /* Assets.xcassets in Resources */,
 				F87F48E7267F703E004BD88D /* Main.storyboard in Resources */,
 			);
@@ -137,9 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F87F48E4267F703E004BD88D /* ViewController.swift in Sources */,
+				F87F48F8267F7392004BD88D /* MainVC.swift in Sources */,
 				F87F48E0267F703E004BD88D /* AppDelegate.swift in Sources */,
+				F87F48FC267F73D2004BD88D /* MainCVC.swift in Sources */,
 				F87F48E2267F703E004BD88D /* SceneDelegate.swift in Sources */,
+				F87F4900267F7402004BD88D /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
