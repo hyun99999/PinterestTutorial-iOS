@@ -17,6 +17,8 @@
 		F87F4906267F7D1B004BD88D /* MainCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F4904267F7D1B004BD88D /* MainCollectionCell.swift */; };
 		F87F4907267F7D1B004BD88D /* MainCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87F4905267F7D1B004BD88D /* MainCollectionCell.xib */; };
 		F87F490A267F80F7004BD88D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F4909267F80F7004BD88D /* ImageModel.swift */; };
+		F87F490E2680CFDD004BD88D /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F490D2680CFDD004BD88D /* PinterestLayout.swift */; };
+		F87F49112680D099004BD88D /* PinterestLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87F49102680D099004BD88D /* PinterestLayoutDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F87F4904267F7D1B004BD88D /* MainCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionCell.swift; sourceTree = "<group>"; };
 		F87F4905267F7D1B004BD88D /* MainCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionCell.xib; sourceTree = "<group>"; };
 		F87F4909267F80F7004BD88D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		F87F490D2680CFDD004BD88D /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		F87F49102680D099004BD88D /* PinterestLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayoutDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 		F87F48F4267F733F004BD88D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F87F490F2680D087004BD88D /* Protocols */,
+				F87F490C2680CFCB004BD88D /* Classes */,
 				F87F48DF267F703E004BD88D /* AppDelegate.swift */,
 				F87F48E1267F703E004BD88D /* SceneDelegate.swift */,
 				F87F4908267F80DE004BD88D /* Models */,
@@ -141,6 +147,22 @@
 				F87F4909267F80F7004BD88D /* ImageModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F87F490C2680CFCB004BD88D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F87F490D2680CFDD004BD88D /* PinterestLayout.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F87F490F2680D087004BD88D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F87F49102680D099004BD88D /* PinterestLayoutDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +239,11 @@
 				F87F48F8267F7392004BD88D /* MainVC.swift in Sources */,
 				F87F490A267F80F7004BD88D /* ImageModel.swift in Sources */,
 				F87F48E0267F703E004BD88D /* AppDelegate.swift in Sources */,
+				F87F490E2680CFDD004BD88D /* PinterestLayout.swift in Sources */,
 				F87F48E2267F703E004BD88D /* SceneDelegate.swift in Sources */,
 				F87F4906267F7D1B004BD88D /* MainCollectionCell.swift in Sources */,
 				F87F4900267F7402004BD88D /* Const.swift in Sources */,
+				F87F49112680D099004BD88D /* PinterestLayoutDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

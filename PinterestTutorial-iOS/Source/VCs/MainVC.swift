@@ -19,8 +19,13 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setCollectionView()
         setList()
+        setCollectionView()
+        
+        let pinterestLayout = PinterestLayout()
+        pinterestLayout.delegate = self
+        collectionView?.collectionViewLayout = pinterestLayout
+        
     }
     
     // MARK: - Methods
@@ -30,6 +35,14 @@ class MainVC: UIViewController {
             ImageModel(image: "b", title: "두번째"),
             ImageModel(image: "c", title: "세번째"),
             ImageModel(image: "d", title: "네번째"),
+            ImageModel(image: "a", title: "첫번째"),
+            ImageModel(image: "b", title: "두번째"),
+            ImageModel(image: "c", title: "세번째"),
+            ImageModel(image: "d", title: "네번째"),
+            ImageModel(image: "a", title: "첫번째"),
+            ImageModel(image: "b", title: "두번째"),
+            ImageModel(image: "c", title: "세번째"),
+            ImageModel(image: "d", title: "네번째")
                             ])
     }
     
@@ -93,3 +106,12 @@ extension MainVC: UICollectionViewDelegateFlowLayout {
         return 5
     }
 }
+//
+//extension MainVC: PinterestLayoutDelegate {
+//    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+//        let cellWidth: CGFloat = (view.bounds.width - 4) / 2 // 셀 가로 크기
+//        let imageRatio: Double = unsplashes[indexPath.item].imageRatio // 이미지 비율
+//
+//        return CGFloat(imageRatio) * cellWidth
+//    }
+//}
