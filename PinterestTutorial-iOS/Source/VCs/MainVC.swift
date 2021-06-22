@@ -18,31 +18,32 @@ class MainVC: UIViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        let pinterestLayout = PinterestLayout()
+        pinterestLayout.delegate = self
+        collectionView.collectionViewLayout = pinterestLayout
 
         setList()
         setCollectionView()
         
-        let pinterestLayout = PinterestLayout()
-        pinterestLayout.delegate = self
-        collectionView?.collectionViewLayout = pinterestLayout
-        
+
     }
     
     // MARK: - Methods
     func setList() {
+        // 더미 이미지 데이터 생성
         imageList.append(contentsOf:[
-            ImageModel(image: "a", title: "첫번째"),
-            ImageModel(image: "b", title: "두번째"),
-            ImageModel(image: "c", title: "세번째"),
-            ImageModel(image: "d", title: "네번째"),
-            ImageModel(image: "a", title: "첫번째"),
-            ImageModel(image: "b", title: "두번째"),
-            ImageModel(image: "c", title: "세번째"),
-            ImageModel(image: "d", title: "네번째"),
-            ImageModel(image: "a", title: "첫번째"),
-            ImageModel(image: "b", title: "두번째"),
-            ImageModel(image: "c", title: "세번째"),
-            ImageModel(image: "d", title: "네번째")
+            ImageModel(title: "first", image: "a"),
+            ImageModel(title: "second", image: "b"),
+            ImageModel(title: "third", image: "c"),
+            ImageModel(title: "fourth", image: "d"),
+            ImageModel(title: "fifth", image: "e"),
+            ImageModel(title: "first", image: "f"),
+            ImageModel(title: "second", image: "g"),
+            ImageModel(title: "third", image: "h"),
+            ImageModel(title: "fifth", image: "i"),
+            ImageModel(title: "fourth", image: "j"),
+            ImageModel(title: "fifth", image: "a"),
+            ImageModel(title: "second", image: "b")
                             ])
     }
     
@@ -78,40 +79,15 @@ extension MainVC: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-extension MainVC: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // 이것보다 좋은 코드는 없을까? 왜냐면 같은 내용을 두번쓰니까
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionCell", for: indexPath) as? MainCollectionCell else {
-            return CGSize.zero
-        }
-        cell.setData(image: imageList[indexPath.row].image, title: imageList[indexPath.row].title)
+extension MainVC: PinterestLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let cellWidth: CGFloat = (view.bounds.width - 4) / 2 // 셀 가로 크기
+        let imageHeight = imageList[indexPath.item].image.size.height // 이미지 비율
+        let imageWidth = imageList[indexPath.item].image.size.width
+        let imageRatio = imageHeight/imageWidth
         
-        let width = UIScreen.main.bounds.width
-        let cellWidth = width * (177/375)
-        let cellHeight = cell.imageView.frame.height
         
-        return CGSize(width: cellWidth, height: cellHeight)
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.zero
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return imageRatio * cellWidth
+//        return imageList[indexPath.row].image.size.width
     }
 }
-//
-//extension MainVC: PinterestLayoutDelegate {
-//    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-//        let cellWidth: CGFloat = (view.bounds.width - 4) / 2 // 셀 가로 크기
-//        let imageRatio: Double = unsplashes[indexPath.item].imageRatio // 이미지 비율
-//
-//        return CGFloat(imageRatio) * cellWidth
-//    }
-//}

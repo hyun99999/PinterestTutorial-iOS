@@ -10,6 +10,7 @@ import UIKit
 class MainCollectionCell: UICollectionViewCell {
 
     // MARK: - @IBOulet Properties
+    @IBOutlet weak var view: UIView!
     @IBOutlet weak var touchBtn: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -18,15 +19,23 @@ class MainCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        view.backgroundColor = .systemBlue
+        touchBtn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
     }
     
     // MARK: - Methods
-    func setData(image: String, title: String) {
-        if let image = UIImage(named: image) {
+    func setData(image: UIImage, title: String) {
+//        if let image = image {
             imageView.image = image
-        }
+//        }
+        view.layer.cornerRadius = 8
+        imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         textLabel.text = title
+        textLabel.textColor = .white
     }
-
+    @IBAction func detailBtnClicked(_ sender: Any) {
+        print("clicked")
+    }
+    
 }

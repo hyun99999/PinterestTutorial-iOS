@@ -53,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F48DE267F703E004BD88D /* PinterestTutorial-iOS */,
+				F87F48E8267F703E004BD88D /* Assets.xcassets */,
 				F87F48DD267F703E004BD88D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				F87F48ED267F703E004BD88D /* Info.plist */,
-				F87F48E8267F703E004BD88D /* Assets.xcassets */,
 				F87F48F4267F733F004BD88D /* Source */,
 				F87F48F3267F7338004BD88D /* Resource */,
 			);
@@ -87,12 +87,11 @@
 		F87F48F4267F733F004BD88D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F87F490F2680D087004BD88D /* Protocols */,
-				F87F490C2680CFCB004BD88D /* Classes */,
 				F87F48DF267F703E004BD88D /* AppDelegate.swift */,
 				F87F48E1267F703E004BD88D /* SceneDelegate.swift */,
+				F87F490F2680D087004BD88D /* Protocols */,
+				F87F490C2680CFCB004BD88D /* Classes */,
 				F87F4908267F80DE004BD88D /* Models */,
-				F87F4901267F7B79004BD88D /* Extensions */,
 				F87F48FE267F73EF004BD88D /* Consts */,
 				F87F48F9267F73B3004BD88D /* Cells */,
 				F87F48F6267F7357004BD88D /* VCs */,
@@ -132,13 +131,6 @@
 				F87F48FF267F7402004BD88D /* Const.swift */,
 			);
 			path = Consts;
-			sourceTree = "<group>";
-		};
-		F87F4901267F7B79004BD88D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F87F4908267F80DE004BD88D /* Models */ = {

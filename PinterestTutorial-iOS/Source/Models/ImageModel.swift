@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct ImageModel {
-    var image: String
+    var image: UIImage
     var title: String
+
+    init(title: String, image: String) {
+        self.title = title
+        self.image = UIImage(named: image) ?? UIImage()
+    }
 }

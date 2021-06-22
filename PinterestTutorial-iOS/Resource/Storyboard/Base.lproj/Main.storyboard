@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Z3-wm-JIk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JrC-PZ-A1b">
                                     <size key="itemSize" width="128" height="128"/>
@@ -39,12 +39,12 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Z3-wm-JIk" secondAttribute="trailing" id="9TR-ix-vyS"/>
                             <constraint firstItem="4Z3-wm-JIk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ImL-H8-Csq"/>
-                            <constraint firstItem="4Z3-wm-JIk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nuq-TD-BHW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Z3-wm-JIk" secondAttribute="bottom" id="aXM-l0-lgt"/>
+                            <constraint firstItem="4Z3-wm-JIk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nuq-TD-BHW"/>
+                            <constraint firstAttribute="bottom" secondItem="4Z3-wm-JIk" secondAttribute="bottom" id="aXM-l0-lgt"/>
                         </constraints>
                     </view>
                     <connections>
