@@ -28,8 +28,9 @@ class MainCollectionCell: UICollectionViewCell {
 //        if let image = image {
             imageView.image = image
 //        }
-        view.layer.cornerRadius = 8
-        imageView.layer.masksToBounds = true
+        view.layer.cornerRadius = 10
+        view.layer.masksToBounds = true
+        
         imageView.contentMode = .scaleAspectFill
         textLabel.text = title
         textLabel.textColor = .white

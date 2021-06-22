@@ -21,17 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="217" height="216"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQC-Xt-YTj">
-                                <rect key="frame" x="179" y="183" width="30" height="34"/>
+                                <rect key="frame" x="179" y="181" width="30" height="34"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="detailBtnClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="7JN-QG-aDV"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="COf-Ko-G0K">
-                                <rect key="frame" x="0.0" y="0.0" width="217" height="184"/>
+                                <rect key="frame" x="0.0" y="0.0" width="217" height="180"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-LI-wgm">
-                                <rect key="frame" x="8" y="192" width="33" height="16"/>
+                                <rect key="frame" x="8" y="188" width="33" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="kvw-ar-kch"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -47,6 +50,7 @@
                             <constraint firstAttribute="trailing" secondItem="QQC-Xt-YTj" secondAttribute="trailing" constant="8" id="q2L-3y-aku"/>
                             <constraint firstItem="bZN-LI-wgm" firstAttribute="leading" secondItem="hHb-kb-Kwu" secondAttribute="leading" constant="8" id="q4L-G5-gIo"/>
                             <constraint firstItem="QQC-Xt-YTj" firstAttribute="centerY" secondItem="bZN-LI-wgm" secondAttribute="centerY" id="rzf-9M-3Py"/>
+                            <constraint firstItem="QQC-Xt-YTj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bZN-LI-wgm" secondAttribute="trailing" constant="9" id="shY-9g-PJB"/>
                         </constraints>
                     </view>
                 </subviews>

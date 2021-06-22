@@ -37,7 +37,7 @@ class PinterestLayout: UICollectionViewFlowLayout {
         guard let collectionView = collectionView, cache.isEmpty else { return }
         
         let numberOfColumns: Int = 2 // 한 행의 아이템 갯수
-        let cellPadding: CGFloat = 2
+        let cellPadding: CGFloat = 5
         let cellWidth: CGFloat = contentWidth / CGFloat(numberOfColumns)
         
         let xOffSet: [CGFloat] = [0, cellWidth] // cell 의 x 위치를 나타내는 배열

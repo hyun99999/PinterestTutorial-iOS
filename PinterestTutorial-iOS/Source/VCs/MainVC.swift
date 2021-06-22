@@ -32,18 +32,18 @@ class MainVC: UIViewController {
     func setList() {
         // 더미 이미지 데이터 생성
         imageList.append(contentsOf:[
-            ImageModel(title: "first", image: "a"),
-            ImageModel(title: "second", image: "b"),
-            ImageModel(title: "third", image: "c"),
-            ImageModel(title: "fourth", image: "d"),
-            ImageModel(title: "fifth", image: "e"),
-            ImageModel(title: "first", image: "f"),
-            ImageModel(title: "second", image: "g"),
+            ImageModel(title: "imperdiet est sed tincidunt bibendum.", image: "a"),
+            ImageModel(title: "at felis in diam", image: "b"),
+            ImageModel(title: "popular during the Renaissance", image: "c"),
+            ImageModel(title: "Cicero are also ", image: "d"),
+            ImageModel(title: "repeat predefined", image: "e"),
+            ImageModel(title: "variations of passages", image: "f"),
+            ImageModel(title: "content of a page", image: "g"),
             ImageModel(title: "third", image: "h"),
             ImageModel(title: "fifth", image: "i"),
             ImageModel(title: "fourth", image: "j"),
-            ImageModel(title: "fifth", image: "a"),
-            ImageModel(title: "second", image: "b")
+            ImageModel(title: "fifth", image: "k"),
+            ImageModel(title: "second", image: "l")
                             ])
     }
     
@@ -88,6 +88,5 @@ extension MainVC: PinterestLayoutDelegate {
         
         
         return imageRatio * cellWidth
-//        return imageList[indexPath.row].image.size.width
     }
 }
