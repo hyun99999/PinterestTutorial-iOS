@@ -21,7 +21,8 @@ class MainVC: UIViewController {
         let pinterestLayout = PinterestLayout()
         pinterestLayout.delegate = self
         collectionView.collectionViewLayout = pinterestLayout
-
+        collectionView.contentInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        
         setList()
         setCollectionView()
         
@@ -81,7 +82,7 @@ extension MainVC: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension MainVC: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        let cellWidth: CGFloat = (view.bounds.width - 4) / 2 // 셀 가로 크기
+        let cellWidth: CGFloat = view.bounds.width / 2 // 셀 가로 크기
         let imageHeight = imageList[indexPath.item].image.size.height // 이미지 비율
         let imageWidth = imageList[indexPath.item].image.size.width
         let imageRatio = imageHeight/imageWidth
