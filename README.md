@@ -119,4 +119,3 @@ extension MainVC: PinterestLayoutDelegate {
 
 ### 출처
 출처ㅣ[Swift. UICollectionView Pinterest 레이아웃](https://devmjun.github.io/archive/CollectionView-Pinterest)
-        }ㄹ처ㅣ
